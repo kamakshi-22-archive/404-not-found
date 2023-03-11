@@ -49,8 +49,8 @@ header {
 
 main {
     display: flex;
-    height: 100%;
-    justify-content: space-around;
+    min-height: 100vh;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 
@@ -131,13 +131,21 @@ footer {
     text-align: center;
     margin: 1rem 0 0 1rem;
     color: #bdbdbd;
+
+    @media screen and (min-width: 768px) {
+        position: relative;
+        bottom: 0;
+    }
+
     p {
         font-family: "Montserrat", sans-serif;
         font-style: normal;
         font-weight: 500;
-        a{
+
+        a {
             color: #bdbdbd;
             text-decoration: none;
+
             &:hover {
                 color: $primary;
             }
